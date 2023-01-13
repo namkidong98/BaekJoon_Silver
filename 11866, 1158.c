@@ -1,4 +1,4 @@
-//¿ä¼¼Çª½º ¹®Á¦ 0(½Ç¹ö 5): Å¥ Á¦°Å
+//ìš”ì„¸í‘¸ìŠ¤ ë¬¸ì œ 0(ì‹¤ë²„ 5): í ì œê±°
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +10,7 @@ int main() {
 	front = rear = -1;
 	scanf("%d %d", &num, &target);
 
-	//ÃÊ±â °ª ¼³Á¤
+	//ì´ˆê¸° ê°’ ì„¤ì •
 	queue = (int*)malloc(sizeof(int) * num * num);
 	for (i = 0; i < num; i++) {
 		queue[++rear] = i + 1;
@@ -19,7 +19,7 @@ int main() {
 	printf("<");
 	for (i = 0; i < num; i++) {
 		for (j = 0; j < target - 1; j++) {
-			queue[++rear] = queue[++front];//targetÀÌÀü±îÁö ¾Õ¿¡²¨¸¦ µÚ¿¡ ³Ñ±ä´Ù
+			queue[++rear] = queue[++front];//targetì´ì „ê¹Œì§€ ì•ì—êº¼ë¥¼ ë’¤ì— ë„˜ê¸´ë‹¤
 		}
 		if (rear - front == 1) printf("%d", queue[++front]);
 		else printf("%d, ", queue[++front]);
